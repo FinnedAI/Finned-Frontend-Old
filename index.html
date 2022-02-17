@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <title>Finned: Smarten Your Ads</title>
+
+        <!-- local assets -->
+        <link rel="stylesheet" href="assets/stylesheet.css"/>
+        <script src="assets/script.js" defer></script>
+
+        <!-- specifiy metas for mobile -->
+        <meta charset="UTF-8">
+        <meta property="og:title" content="Finned: Smarten Your Ads">
+        <meta property="og:description" content="Finned AI Advertising Solutions">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://finned.tech">
+        <meta property="og:image" content="assets/images/logo.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- external assets -->
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img src="assets/images/logo.png"/>
+
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
+            <a href="#features">Features</a>
+            <a href="#why-finned">Why Finned?</a>
+        </div>
+
+        <div class="main">
+            <!-- 1 screen -->
+            <div class="header fullscreen">
+                <div class="overlay">
+                    <div class="centered-vertically" style="text-align:center; top:40%;">
+                        <img class="logo" src="assets/images/logo.png"/>
+                        <h1 class="title">
+                            <mark class="dark">Finned: Smarten <br> Your Ads.</mark>
+                        </h1>
+                    </div>
+
+                    <img style="width:2.5%;position: absolute !important;bottom:0px;" class="centered inverse" src="assets/images/arrow-down.png"/>
+                </div>
+            </div>
+
+            <!-- 3/4 screen -->
+            <div class="summary" id="why-finned">
+                <h1 class="title">
+                    <mark class="light">Why Finned?</mark>
+                </h1>
+
+                <h1 style="color: var(--text-primary); width:50%;">
+                    Finned's proprietary AI software decides which ads to display, when. By doing so, Finned increases conversions and brings more attention to <i>your</i> product.
+                </h1>
+
+                <div class="contact-box vertically">
+                    <h2 style="color: var(--text-secondary); text-align:center;">
+                        <i class="fa-solid fa-phone"></i> (863)-944-5253
+
+                        <br>
+                        <br>
+
+                        <i class="fa-solid fa-envelope"></i> flancast90@gmail.com
+                    </h2>
+
+                    <button class="centered" onclick="location.href=`mailto:flancast90@gmail.com`"> Contact </button>
+                </div>
+            </div>
+
+            <!-- 1 - 1.5 screen -->
+            <div class="benefits" id="features">
+
+                <br>
+
+                <div class="benefit-box">
+                    <h1 class="title">
+                        <mark class="dark">
+                            Simple
+                        </mark>
+                    </h1>
+                    <h2>
+                        Finned has an intuitive UI and simple commands, allowing <i>you</i> and <i>your</i> company to be as productive as possible, without worrying about the more difficult side of advertising.
+                    </h2>
+                </div>
+
+                <div class="benefit-box">
+                    <h1 class="title">
+                        <mark class="dark">
+                            Powerful
+                        </mark>
+                    </h1>
+                    <h2>
+                        Finned provides a <i>powerful</i> suite of tools to increase leads and conversions on <i>your</i> digital billboards. 
+                    </h2>
+                </div>
+
+                <div class="benefit-box">
+                    <h1 class="title">
+                        <mark class="dark">
+                            Customisable
+                        </mark>
+                    </h1>
+                    <h2>
+                        Finned puts <i>you</i> in control of your ads, taking care of the more redundant tasks itself. With its easy-to-use interface, Finned gives <i>you</i> control of ads uploads, edits, and removals.
+                    </h2>
+                </div>
+
+                <div class="benefit-box">
+                    <h1 class="title">
+                        <mark class="dark">
+                            Cross-Platform
+                        </mark>
+                    </h1>
+                    <h2>
+                        Finned runs on most any system, from a standard desktop computer to an old laptop. It uses open-source libraries to ensure support is as broad as possible.
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 1 screen -->
+            <div class="contact" id="contact">
+                <div class="fullscreen bkg2">
+                    <div class="overlay">
+                        <div class="vertically" style="text-align:right;">
+                            <mark class="title dark" style="margin-right: 5%; display:inline-block;">
+                                Contact Us!
+                            </mark>
+
+                            <br>
+
+                            <form style="margin-right: 5%; display: inline-block;" onsubmit="mail(); return false;">
+                                <label for="name">Name</label>
+                                <input required id="name" class="formcontrol" type="text"/>
+
+                                <label for="email">Email Address</label>
+                                <input required id="email" class="formcontrol" type="email"/>
+
+                                <label for="body">Message</label>
+                                <textarea id="body" class="formcontrol"></textarea>
+
+                                <br><br>
+
+                                <button id="send" class="formcontrol" type="submit">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3/4 screen -->
+            <div class="faqs" id="faqs">
+                <h1 class="centered title" style="text-align: center;">
+                    <mark class="dark">
+                        FAQs
+                    </mark>
+                </h1>
+
+                <div class="dropdowns">
+                    <details>
+                        <summary><h1 class="mark">About Finned</h1></summary>
+                        <h4>content here</h4>
+                    </details>
+                    <details>
+                        <summary><h1 class="mark">Is Finned right for me?</h1></summary>
+                        <h4>content here</h4>
+                    </details>
+                    <details>
+                        <summary><h1 class="mark">How to use Finned.</h1></summary>
+                        <h4>content here</h4>
+                    </details>
+                    <details>
+                        <summary><h1 class="mark">Getting started with Finned.</h1></summary>
+                        <h4>content here</h4>
+                    </details>
+                </div>
+            </div>
+
+            <!-- 1/2 screen -->
+            <div class="footer" style="text-align:center; padding-bottom:1%;">
+                <div class="tri">
+                    <img src="assets/images/logo.png" style="position:relative;width:75%;"/>
+
+                    <h3> Finned: Smarten Your Ads. </h3>
+                </div>
+                <div class="tri">
+                    <h1>About</h1>
+
+                    <h3> Finned is a productivity tool suite for displaying relevant advertisements on digital billboards. By using a proprietary AI, it determines the best ads to whow, and when, to gather the most leads and views. </h3>
+                </div>
+                <div class="tri">
+                    <h1>Get In Touch</h1>
+
+                    <h3>
+                        <i class="fa-solid fa-phone"></i> (863)-944-5253
+
+                        <br>
+                        <br>
+
+                        <i class="fa-solid fa-envelope"></i> flancast90@gmail.com
+                        
+                    </h3>
+
+                    <button onclick="location.href=`mailto:flancast90@gmail.com`"> Contact </button>
+                </div>
+
+                <h3>Copyright (©) 2022 <b>Finn Lancaster</b></h3>
+            </div>
+        </div>
+    </body>
+</html>

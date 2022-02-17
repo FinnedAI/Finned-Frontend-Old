@@ -1,0 +1,460 @@
+:root {
+    --main-bg-color: #18191A;
+    --secondary-bg-color: #242526;
+    --bg-hover-color: #3A3B3C;
+    --text-primary: #E4E6EB;
+    --text-secondary: #B0B3B8;
+    --blue-primary: #9bd4e4;
+    --blue-secondary: #cadeef;
+    --blue-primary-opaque: #9bd4e4bf;;
+    --blue-secondary-opaque: #cadeefbf;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--text-primary);
+
+    word-break: break-all;
+    overflow-x: hidden;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+    .navbar img {
+        display: none !important;
+    }
+    .contact-box {
+        display: none;
+    }
+    .summary h1 {
+        width: 90% !important;
+    }
+    .benefit-box {
+        width: 85% !important;
+    }
+    .formcontrol {
+        width: 100% !important;
+        height: 100% !important;
+        right: auto !important;
+        left: 0px;
+    }
+    .contact .vertically {
+        right: auto !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .contact input, .contact textarea{
+        width: 90vw;
+    }
+    .tri {
+        width: 85% !important;
+    }
+}
+
+*::-webkit-scrollbar {
+    position: fixed;
+    background-color: var(--bg-hover-color);
+    width: 18px;
+}
+   
+*::-webkit-scrollbar-track {
+    position: relative;
+    background-color: #bebebe;
+}
+   
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bg-hover-color);
+    border: 5px solid #bebebe;
+    border-radius: 15px;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    display: inline-block;
+    left: 0px;
+    top:0px;
+
+    background-color: #000;
+
+    width: 100%;
+    height: 10vh;
+}
+
+.navbar img{
+    position: relative;
+    left: 5px;
+    display: inline-block;
+
+    height: 100%;
+    width: auto;
+}
+
+.navbar a {
+    position: relative;
+    color: var(--text-primary);
+    display: inline;
+    padding: 1%;
+    float: right;
+
+    background-color: var(--main-bg-color);
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: var(--text-primary);
+    color: var(--main-bg-color);
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer; 
+}
+
+.main {
+    /* general setup and sizing */
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    /* positioning */
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.fullscreen {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    top:0px;
+    left:0px;
+
+    background-color: var(--blue-primary-opaque);
+}
+
+.centered {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.centered-vertically {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertically {
+    position: relative;
+    top:50%;
+    transform:translateY(-50%)
+}
+
+.header {
+    width: 100vw;
+    position: relative;
+
+    background-image: url('images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.bkg2 {
+    position: relative;
+
+    background-image: url('images/bkg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.title {
+    font-size: 4em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.dark {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-primary);
+}
+
+.light {
+    background-color: var(--text-primary);
+    color: var(--secondary-bg-color)
+}
+
+.inverse {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(38deg) brightness(108%) contrast(101%);
+}
+
+.summary {
+    padding-top: 10%;
+    background-color: var(--main-bg-color);
+    position: relative;
+    padding-bottom: 10%;
+}
+
+.summary .title, .summary h1 {
+    margin-left: 5%;
+}
+
+.contact-box {
+    position:absolute;
+    height: 75%;
+    width: 33%;
+
+    margin-right:5%;
+    right: 0px;
+
+    box-shadow: 10px 5px 5px var(--blue-secondary-opaque);
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    border: 0.25em solid var(--blue-primary-opaque);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-box:hover {
+    height: 76%;
+    width: 33.5%;
+
+    background-color: var(--bg-hover-color);
+}
+
+.contact-box button {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 1%;
+
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    color: var(--secondary-bg-color);
+    border: 0.25em solid var(--blue-primary-opaque);
+    background-color: var(--blue-primary);
+    border-radius: 10px;
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-box button:hover {
+    color: var(--blue-primary);
+    background-color: var(--secondary-bg-color);
+}
+
+.benefits {
+    position: relative;
+    text-align: center;
+
+    background-color: var(--text-primary);
+}
+
+.benefit-box {
+    position: relative;
+
+    display: inline-block;
+    border-left: 1em solid var(--blue-primary);
+    background-color: var(--blue-secondary-opaque);
+
+    vertical-align: top;
+    margin: 1%;
+    padding: 1%;
+    width: 40%;
+}
+
+.integration {
+    width: 30%;
+}
+
+.contact {position:relative;}
+
+.contact .vertically {
+    position: absolute;
+    right: 0px;
+    width: 75%;
+}
+
+.contact label {
+    color: var(--text-primary);
+    display: block;
+}
+
+.contact input, .contact textarea {
+    position: relative;
+
+    pointer-events: all;
+    outline: none;
+
+    color: var(--text-primary);
+
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid var(--main-bg-color)
+}
+
+.formcontrol {
+    width: 100%;
+    height: 10%;
+
+    font-size: 2em;
+}
+
+.contact button[type=submit] {
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    color: var(--text-primary);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.contact button[type=submit]:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.contact textarea {
+    height: 6em;
+}
+
+/* FAQS */
+.faqs {
+    position: relative;
+    background-color: var(--text-primary);
+}
+
+.dropdowns {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* transition for dropdowns */
+@keyframes roll {
+    0%    {opacity: 0; margin-top: -1em}
+    100%  {opacity: 1; margin-top: 1em}
+}
+
+details {
+    width: 75%;
+    margin: 0 auto ;
+    margin-top: 1%;
+    background: var(--blue-secondary-opaque);
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+    border-radius: 5px;
+    overflow: hidden;
+
+    border-left: 1em solid var(--blue-primary);
+    border-radius: 0px;
+}
+  
+summary {
+    padding: 1rem;
+    display: block;
+    background: var(--blue-secondary-opaque);
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+    color: var(--main-bg-color);
+
+    border-left: 0.001em solid var(--blue-primary);
+}
+  
+summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+  
+details[open] > summary:before {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+
+    transform: rotate(90deg);
+}
+
+details[open] summary ~ * {
+    animation: roll .5s ease-in-out;
+}
+  
+details summary::-webkit-details-marker {
+    display:none;
+}
+  
+details > h4 {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+.footer {
+    position: relative;
+    background-color: var(--main-bg-color);
+    color: var(--text-primary)
+}
+
+.tri {
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.footer button {
+    position: relative;
+    width: 75%;
+    height: 10%;
+
+    font-size: 1.5em;
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer button:hover {
+    background-color: var(--bg-hover-color);
+}
