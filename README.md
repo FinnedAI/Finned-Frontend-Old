@@ -1,2 +1,2 @@
 # Finned-Site
-The public website for Finned AI Adservices
+The public frontend for Finned Ad Services
